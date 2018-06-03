@@ -10,7 +10,7 @@
 #define GENERATE_TABLE_H
 
 #include "preassembler.h"
-#include "conversion.h"
+#include <vector>
 
 using namespace std;
 

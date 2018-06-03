@@ -36,6 +36,12 @@
     <ClInclude Include="generate_table.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="split.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="binary_search.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -53,7 +59,10 @@
     <ClCompile Include="record.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="generate_table.cpp">
+    <ClCompile Include="splt.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="binary_search.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

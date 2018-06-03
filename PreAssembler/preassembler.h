@@ -10,23 +10,22 @@
 #define PREASSEMBLER_H
 
 /* required libraries */
-#include "stdafx.h"
-#include "stdio.h"
-#include <iostream>
+#include <algorithm>
 #include <fstream>
+#include <iostream>
 #include <string>
 #include <sstream>
 #include <vector>
 #include <locale>
-#include <algorithm>
 #include <iterator>
 
 /* custom files */
 #include "conversion.h"
 #include "error.h"
-#include "generate_table.h"
+#include "split.h"
+#include "stdafx.h"
+#include "stdio.h"
 #include "record.h"
-
 
 /* global definitions */
 #define IFILE_PATH "A:/Documents/GitHub/PreAssembler/input - easy.txt"
