@@ -22,10 +22,11 @@
 #include <iterator>
 
 /* custom files */
-#include "error.h"
 #include "conversion.h"
-#include "record.h"
+#include "error.h"
 #include "generate_table.h"
+#include "record.h"
+
 
 /* global definitions */
 #define IFILE_PATH "A:/Documents/GitHub/PreAssembler/input - easy.txt"

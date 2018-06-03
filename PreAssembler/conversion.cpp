@@ -8,7 +8,6 @@
 
 #include "conversion.h"
 
-
 conversion::conversion(string i, string e, bool a, string l, string r)
 {
 	instruction = i;
@@ -50,4 +49,6 @@ void conversion::write(ostream& out) const
 	out << hasArgs << " ";
 	out << argL << " ";
 	out << argR << "\n";
+
+	return;
 }

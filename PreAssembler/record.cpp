@@ -60,4 +60,6 @@ void record::write(ostream& out) const
 	out << "Emulation is: " << emulation << "\n";
 	out << "Argument is: " << argument << "\n";
 	out << "Comment is: " << comment << "\n";
+	
+	return;
 }

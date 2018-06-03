@@ -11,6 +11,8 @@
 
 #include "preassembler.h"
 
+using namespace std;
+
 class record
 {
 private:
