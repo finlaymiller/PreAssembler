@@ -1,0 +1,16 @@
+	org	#$100	; Unchanged by pre-assembler
+	NOP		; Output to new assembler file should be MOV PSW,PSW
+	call	SUBR	
+	CALL	SUBR
+	caLL	SUBR
+	PUSH	R3	; Output to new assembler file should be ST R3,-SP
+	CLRZ		; Output to new assembler file should be BIC #2,PSW
+	MOVL	SUBR,R0	; Output to new assembler file should be unchanged
+	MOVH	SUBR,R0	; Output to new assembler file should be unchanged
+	jump	R0	; Output to new assembler file should be MOV R0,PC
+	jump	R3	; Output to new assembler file should be MOV R3,PC
+	ADD	R1,R2	; Output to new assembler file should be unchanged
+	sbc	R3	; Output to new assembler file should be SUBC #0,R3 
+	sbc.w	R3	; Output to new assembler file should be SUBC.W #0,R3
+	sbc.b	R3	; Output to new assembler file should be SUBC.B #0,
+	JUMP	LABEL	; Output to new assembler file should be MOV LABEL,PC
