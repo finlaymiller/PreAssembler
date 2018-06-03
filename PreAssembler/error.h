@@ -9,9 +9,7 @@
 #ifndef ERROR_H
 #define ERROR_H
 
-#include "stdafx.h"
-#include <string>
-#include <iostream>
+#include "preassembler.h"
 
 using namespace std;
 

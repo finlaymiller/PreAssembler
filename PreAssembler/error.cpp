@@ -16,6 +16,7 @@ void error(string instruction)
 	Output:     None
 	*/
 
+	if (instruction == "write") cout << "Error writing to file!\n";
 	cout << "Error found due to record for instruction " << instruction << "\n";
 	return;
 }
