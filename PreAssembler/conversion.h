@@ -11,8 +11,6 @@
 
 #include "preassembler.h"
 
-using namespace std;
-
 class conversion
 {
 private:

@@ -20,12 +20,16 @@
 #include <iterator>
 
 /* custom files */
+#include "binary_search.h"
 #include "conversion.h"
+#include "convert.h"
 #include "error.h"
+#include "format_record.h"
+#include "get_input.h"
+#include "record.h"
 #include "split.h"
 #include "stdafx.h"
 #include "stdio.h"
-#include "record.h"
 
 /* global definitions */
 #define IFILE_PATH "A:/Documents/GitHub/PreAssembler/input - easy.txt"

@@ -11,8 +11,6 @@
 
 #include "preassembler.h"
 
-using namespace std;
-
 void error(string instruction);
 
 #endif // !ERROR_H

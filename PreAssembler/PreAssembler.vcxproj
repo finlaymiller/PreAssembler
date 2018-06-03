@@ -149,8 +149,11 @@
   <ItemGroup>
     <ClInclude Include="binary_search.h" />
     <ClInclude Include="conversion.h" />
+    <ClInclude Include="convert.h" />
     <ClInclude Include="error.h" />
+    <ClInclude Include="format_record.h" />
     <ClInclude Include="generate_table.h" />
+    <ClInclude Include="get_input.h" />
     <ClInclude Include="preassembler.h" />
     <ClInclude Include="record.h" />
     <ClInclude Include="split.h" />
@@ -164,7 +167,16 @@
     <ClCompile Include="conversion.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="convert.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
     <ClCompile Include="error.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="format_record.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="get_input.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="PreAssembler.cpp">
@@ -174,7 +186,7 @@
     <ClCompile Include="record.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="splt.cpp">
+    <ClCompile Include="split.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">

@@ -12,8 +12,6 @@
 #include "preassembler.h"
 #include <vector>
 
-using namespace std;
-
 vector<conversion> generate_table(void);
 
 #endif // !GENERATE_TABLE_H
