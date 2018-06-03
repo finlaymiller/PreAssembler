@@ -10,6 +10,7 @@
 #define RECORD_H
 
 #include "preassembler.h"
+using namespace std;
 
 class record
 {
@@ -31,5 +32,61 @@ public:
 	void setComment(string c);
 	void write(ostream& out) const;
 };
+
+string record::getLabel()
+{
+	return label;
+}
+
+string record::getInstruction()
+{
+	return instruction;
+}
+
+string record::getArgument()
+{
+	return argument;
+}
+
+string record::getComment()
+{
+	return comment;
+}
+
+void record::setLabel(string l)
+{
+	this->label = l;
+}
+
+void record::setInstruction(string i)
+{
+	this->instruction = i;
+}
+
+void record::setEmulation(string e)
+{
+	this->emulation = e;
+}
+
+void record::setArgument(string a)
+{
+	this->argument = a;
+}
+
+void record::setComment(string c)
+{
+	this->comment = c;
+}
+
+void record::write(ostream& out) const
+{
+	out << "Label is: " << label << "\n";
+	out << "Instruction is: " << instruction << "\n";
+	out << "Emulation is: " << emulation << "\n";
+	out << "Argument is: " << argument << "\n";
+	out << "Comment is: " << comment << "\n";
+
+	return;
+}
 
 #endif // !RECORD_H

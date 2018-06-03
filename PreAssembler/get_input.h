@@ -10,6 +10,7 @@
 #define GET_INPUT_H
 
 #include "preassembler.h"
+using namespace std;
 
 vector<string> get_input(string filepath);
 

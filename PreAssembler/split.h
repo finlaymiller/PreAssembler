@@ -10,6 +10,7 @@
 #define SPLIT_H
 
 #include "preassembler.h"
+using namespace std;
 
 vector<string> split(const string& input, const string& delims);
 

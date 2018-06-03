@@ -62,12 +62,6 @@
     <ClCompile Include="error.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="conversion.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="record.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="binary_search.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

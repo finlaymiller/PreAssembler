@@ -10,6 +10,7 @@
 #define ERROR_H
 
 #include "preassembler.h"
+using namespace std;
 
 void error(string instruction);
 

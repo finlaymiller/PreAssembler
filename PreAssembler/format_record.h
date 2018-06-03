@@ -10,6 +10,7 @@
 #define FORMAT_RECORD_H
 
 #include "preassembler.h"
+using namespace std;
 
 vector<string> format_record(const char * p_rv);
 

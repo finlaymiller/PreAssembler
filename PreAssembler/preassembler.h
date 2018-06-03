@@ -36,6 +36,4 @@
 #define OFILE_PATH "A:/Documents/GitHub/PreAssembler/output - easy.txt"
 #define TABLE_SIZE 56
 
-using namespace std;
-
 #endif // !PREASSEMBLER_H

@@ -11,6 +11,6 @@
 
 #include "preassembler.h"
 
-record convert(vector<string> v_rec, vector<conversion> v_conv);
+record convert(std::vector<string> v_rec, std::vector<conversion> v_conv);
 
 #endif // !CONVERT_H

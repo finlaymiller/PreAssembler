@@ -10,6 +10,7 @@
 #define BINARY_SEARCH_H
 
 #include "preassembler.h"
+using namespace std;
 
 int binary_search(vector<conversion> vect, string inst);
 
