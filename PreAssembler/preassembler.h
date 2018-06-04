@@ -24,10 +24,11 @@
 /* required classes and functions */
 #include "record.h"
 #include "conversion.h"
+#include "formatting.h"
 
 /* global definitions */
-#define IFILE_PATH "A:/Documents/GitHub/PreAssembler/input test.txt"
-#define OFILE_PATH "A:/Documents/GitHub/PreAssembler/output test.txt"
+#define IFILE_PATH "A:/Documents/GitHub/PreAssembler/input.txt"
+#define OFILE_PATH "A:/Documents/GitHub/PreAssembler/output.txt"
 #define TABLE_SIZE 56
 
 #endif // !PREASSEMBLER_H

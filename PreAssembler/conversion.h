@@ -9,9 +9,12 @@
 #ifndef CONVERSION_H
 #define CONVERSION_H
 
+#define TABLE_SIZE 56
+
 #include "stdio.h"
 #include <iostream>
 #include <string>
+#include <vector>
 
 class conversion
 {
@@ -31,5 +34,6 @@ public:
 	void write(std::ostream& out) const;
 };
 
-#endif // !CONVERSION_H
+std::vector<conversion> generate_table(void);
 
+#endif // !CONVERSION_H
