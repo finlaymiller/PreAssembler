@@ -21,14 +21,14 @@ class conversion
 private:
 	std::string instruction;
 	std::string emulation;
-	bool hasArgs;
+	int argType;
 	std::string argL;
 	std::string argR;
 public:
-	conversion(std::string i, std::string e, bool a, std::string l, std::string r);
+	conversion(std::string i, std::string e, int a, std::string l, std::string r);
 	std::string getInstruction() { return instruction; }
 	std::string getEmulation() { return emulation; }
-	bool doesHaveArgs() { return hasArgs; }
+	int getArgType() { return argType; }
 	std::string getArgL() { return argL; }
 	std::string getArgR() { return argR; }
 	void write(std::ostream& out) const;
