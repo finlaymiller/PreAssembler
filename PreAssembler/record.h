@@ -22,6 +22,7 @@ private:
 	std::string argumentL;
 	std::string argumentR;
 	std::string comment;
+	bool justcomment;
 public:
 	std::string getLabel() { return label; }
 	std::string getInstruction() { return instruction; }
@@ -29,12 +30,14 @@ public:
 	std::string getArgumentL() { return argumentL; }
 	std::string getArgumentR() { return argumentR; }
 	std::string getComment() { return comment; }
+	bool isJustComment() { return justcomment; }
 	void setLabel(std::string l) { this->label = l; }
 	void setInstruction(std::string i) { this->instruction = i; }
 	void setEmulation(std::string e) { this->emulation = e; }
 	void setArgumentL(std::string l) { this->argumentL = l; }
 	void setArgumentR(std::string r) { this->argumentR = r; }
 	void setComment(std::string c) { this->comment = c; }
+	void setJustComment(bool b) { this->justcomment = b; }
 	void write(std::ostream& out) const;
 };
 
