@@ -27,8 +27,8 @@
 #include "formatting.h"
 
 /* global definitions */
-#define IFILE_PATH "A:/Documents/GitHub/PreAssembler/input.txt"
-#define OFILE_PATH "A:/Documents/GitHub/PreAssembler/output.txt"
+#define IFILE_PATH "A:\\Documents\\GitHub\\PreAssembler\\x64\\Debug\\input.txt"
+#define OFILE_PATH "A:\\Documents\\GitHub\\PreAssembler\\x64\\Debug\\output.txt"
 #define TABLE_SIZE 56
 
 #endif // !PREASSEMBLER_H
