@@ -19,16 +19,15 @@ private:
 	std::string label;
 	std::string instruction;
 	std::string emulation;
-	int argType;
+	unsigned int argType;
 	std::string argumentL;
 	std::string argumentR;
 	std::string comment;
-	bool justcomment;
 public:
 	std::string getLabel() { return label; }
 	std::string getInstruction() { return instruction; }
 	std::string getEmulation() { return emulation; }
-	int getArgType() { return argType; }
+	unsigned int getArgType() { return argType; }
 	std::string getArgumentL() { return argumentL; }
 	std::string getArgumentR() { return argumentR; }
 	std::string getComment() { return comment; }

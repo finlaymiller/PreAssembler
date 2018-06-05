@@ -8,7 +8,7 @@
 
 #include "conversion.h"
 
-conversion::conversion(std::string i, std::string e, int a, std::string l, std::string r)
+conversion::conversion(std::string i, std::string e, unsigned int a, std::string l, std::string r)
 {
 	instruction = i;
 	emulation = e;

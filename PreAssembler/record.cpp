@@ -15,10 +15,7 @@ void record::write(std::ostream& out) const
 	Input:      output stream
 	Output:     None
 	*/
-	out << "Label is: " << label << "\n";
-	out << "Instruction is: " << instruction << "\n";
-	out << "Emulation is: " << emulation << "\n";
-	out << "Left argument is: " << argumentL << "\n";
-	out << "Right argument is: " << argumentR << "\n";
-	out << "Comment is: " << comment << "\n";
+	out  << label	<< " " <<  instruction	<< " " << emulation << " "
+		 << argType	<< " " << argumentL		<< " " << argumentR << " " << comment;
+	out << "\n";
 }
