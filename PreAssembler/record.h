@@ -24,6 +24,7 @@ private:
 	std::string argumentR;
 	std::string comment;
 public:
+	record() { }
 	std::string getLabel() { return label; }
 	std::string getInstruction() { return instruction; }
 	std::string getEmulation() { return emulation; }
@@ -34,6 +35,7 @@ public:
 	void setLabel(std::string l) { this->label = l; }
 	void setInstruction(std::string i) { this->instruction = i; }
 	void setEmulation(std::string e) { this->emulation = e; }
+	void setArgType(unsigned int a) { this->argType = a; }
 	void setArgumentL(std::string l) { this->argumentL = l; }
 	void setArgumentR(std::string r) { this->argumentR = r; }
 	void setComment(std::string c) { this->comment = c; }
