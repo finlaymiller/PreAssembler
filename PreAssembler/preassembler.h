@@ -25,6 +25,9 @@
 #include "record.h"
 #include "conversion.h"
 #include "formatting.h"
+#include "binary_search.h"
+#include "convert.h"
+#include "io.h"
 
 /* global definitions */
 #define IFILE_PATH "A:/Documents/GitHub/PreAssembler/input.txt"

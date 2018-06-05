@@ -23,8 +23,10 @@ private:
 	std::string argumentL;
 	std::string argumentR;
 	std::string comment;
+	std::string unknown;
 public:
 	record() { }
+	record(std::string b, std::string i, std::string e, unsigned int a, std::string l, std::string r, std::string c, std::string u);
 	std::string getLabel() { return label; }
 	std::string getInstruction() { return instruction; }
 	std::string getEmulation() { return emulation; }
@@ -32,6 +34,7 @@ public:
 	std::string getArgumentL() { return argumentL; }
 	std::string getArgumentR() { return argumentR; }
 	std::string getComment() { return comment; }
+	std::string getUnknown() { return unknown; }
 	void setLabel(std::string l) { this->label = l; }
 	void setInstruction(std::string i) { this->instruction = i; }
 	void setEmulation(std::string e) { this->emulation = e; }
@@ -39,6 +42,7 @@ public:
 	void setArgumentL(std::string l) { this->argumentL = l; }
 	void setArgumentR(std::string r) { this->argumentR = r; }
 	void setComment(std::string c) { this->comment = c; }
+	void setUnknown(std::string u) { this->unknown = u; }
 	void write(std::ostream& out) const;
 };
 
