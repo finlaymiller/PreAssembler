@@ -3,7 +3,7 @@
 - ECED3403 Assignment 1
 - Record class methods
 - Finlay Miller B00675696
-- 03 June 2018
+- 05 June 2018
 */
 
 #include "record.h"

@@ -3,7 +3,7 @@
 - ECED3403 Assignment 1
 - Sourcefile for the pre-assembler's I/O functions
 - Finlay Miller B00675696
-- 03 June 2018
+- 05 June 2018
 */
 
 #include "io.h"
@@ -26,7 +26,6 @@ std::vector<std::string> get_input(char* input_file)
 	}
 
 	ifile.close();
-
 	return rv;
 }
 
@@ -38,7 +37,8 @@ bool write_output(std::string filepath, std::vector<record> r)
 	Output:     Write status T|F
 	*/
 
-	std::ofstream ofile(filepath);
+	std::ofstream ofile;
+	ofile.open(filepath);
 
 	if (ofile.is_open())
 	{
@@ -66,7 +66,6 @@ bool write_output(std::string filepath, std::vector<record> r)
 			r.erase(r.begin());
 		}
 
-
 		ofile.close();
 		return true;
 	}
@@ -82,7 +81,9 @@ void error(std::string s)
 	*/
 
 	if (s == "write") std::cout << "\nError writing output to file.";
-	if (s == "excess") std::cout << "\nExcess tokens detected.";
+	if (s == "excess") std::cout << "\nExcess tokens detected ";
+	if (s == "u") std::cout << "\nUnidentified tokens encountered during conversion of record:\n";
+	
 	else std::cout << "\nError encountered trying to convert instruction " << s;
 	return;
 }

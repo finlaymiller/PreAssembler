@@ -3,7 +3,7 @@
 - ECED3403 Assignment 1
 - Sourcefile for the pre-assembler's convert function
 - Finlay Miller B00675696
-- 03 June 2018
+- 05 June 2018
 */
 
 #include "convert.h"
@@ -17,11 +17,11 @@ record convert(vector<string> v_rec, vector<conversion> conversion_table)
 	Input:      The record currently being examined, the conversion table (as a vector)
 	Output:     Record to be printed
 	Process:	1.	For current token:
-	a) Is first char ';'? If so, add all tokens to comment string and send to record
-	b) If not, do binary search
-	i. if match, add emulation and instruction to label
-	1) if has args, add them
-	ii. if no match, must be label
+					a) Is first char ';'? If so, add all tokens to comment string and send to record
+					b) If not, do binary search
+						i. if match, add emulation and instruction to label
+							1) if has args, add them
+						ii. if no match, must be label
 	*/
 
 	record r;
@@ -31,6 +31,7 @@ record convert(vector<string> v_rec, vector<conversion> conversion_table)
 	vector<string>::iterator i = v_rec.begin();
 	string label, instruction, emulation, argumentL, argumentR, comment, unknown;
 	unsigned int argType = 0;
+	bool u_error = false;
 
 	// Lasciate ogne speranza, voi ch'entrate
 
@@ -66,6 +67,7 @@ record convert(vector<string> v_rec, vector<conversion> conversion_table)
 				{
 					// If it already has an instruction and there's an
 					// unidentified token pass it as an argument
+					u_error = true;
 					unknown = unknown + " " + v_rec[0];
 					v_rec.erase(v_rec.begin());
 				}
@@ -74,8 +76,7 @@ record convert(vector<string> v_rec, vector<conversion> conversion_table)
 				{
 					switch (conversion_table[bs_result].getArgType())
 					{
-					case 0: if (v_rec.size() > 0) error("excess");
-						break;
+					case 0: break;
 					case 1: argumentL = (v_rec[0]);
 						argumentR = conversion_table[bs_result].getArgR();
 						v_rec.erase(v_rec.begin());
@@ -102,6 +103,7 @@ record convert(vector<string> v_rec, vector<conversion> conversion_table)
 				{
 					// If it already has a label and there's an
 					// unidentified token pass it as an unknown
+					u_error = true;
 					unknown = unknown + " " + v_rec[0];
 					v_rec.erase(v_rec.begin());
 				}
@@ -110,6 +112,11 @@ record convert(vector<string> v_rec, vector<conversion> conversion_table)
 	} // v_rec.size() <= 0 --> record vector is empty
 
 	r = record(label, instruction, emulation, argType, argumentL, argumentR, comment, unknown);
+	if (u_error)
+	{
+		error("u");
+		r.write(cout);
+	}
 	v_rec.clear();
 	return r;
 }

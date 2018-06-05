@@ -3,7 +3,7 @@
 - ECED3403 Assignment 1
 - Sourcefile for the pre-assembler's binary search function
 - Finlay Miller B00675696
-- 03 June 2018
+- 05 June 2018
 */
 
 #include "binary_search.h"
