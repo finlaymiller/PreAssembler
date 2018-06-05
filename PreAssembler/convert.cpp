@@ -54,7 +54,6 @@ record convert(vector<string> v_rec, vector<conversion> conversion_table)
 			if (bs_result >= 0)
 			{
 				// current token identified, and it requires arguments
-				cout << "\nMatch Found!\n";
 				argType = conversion_table[bs_result].getArgType();
 
 				if (r.getInstruction() == "")
@@ -102,7 +101,7 @@ record convert(vector<string> v_rec, vector<conversion> conversion_table)
 				else
 				{
 					// If it already has a label and there's an
-					// unidentified token pass it as an argument
+					// unidentified token pass it as an unknown
 					unknown = unknown + " " + v_rec[0];
 					v_rec.erase(v_rec.begin());
 				}
@@ -111,7 +110,6 @@ record convert(vector<string> v_rec, vector<conversion> conversion_table)
 	} // v_rec.size() <= 0 --> record vector is empty
 
 	r = record(label, instruction, emulation, argType, argumentL, argumentR, comment, unknown);
-	r.write(cout);
 	v_rec.clear();
 	return r;
 }

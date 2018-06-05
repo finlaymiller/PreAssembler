@@ -11,6 +11,6 @@
 
 #include "preassembler.h"
 
-int binary_search(std::vector<conversion> vect, std::string s);
+int binary_search(std::vector<conversion>, std::string);
 
 #endif // !BINARY_SEARCH_H

@@ -17,6 +17,6 @@
 #include <algorithm>
 #include <iterator>
 
-record convert(std::vector<std::string> v_rec, std::vector<conversion> conversion_table);
+record convert(std::vector<std::string>, std::vector<conversion>);
 
 #endif // !CONVERT_H

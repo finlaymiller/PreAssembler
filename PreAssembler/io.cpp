@@ -8,7 +8,7 @@
 
 #include "io.h"
 
-std::vector<std::string> get_input(std::string filepath)
+std::vector<std::string> get_input(char* input_file)
 {
 	/*
 	Purpose:    Reads records from input file
@@ -16,7 +16,8 @@ std::vector<std::string> get_input(std::string filepath)
 	Output:     Vector of std::strings. One entry for each line in file
 	*/
 
-	std::ifstream ifile(filepath);
+	std::ifstream ifile;
+	ifile.open(input_file);
 	std::string record;
 	std::vector<std::string> rv;
 
@@ -54,14 +55,13 @@ bool write_output(std::string filepath, std::vector<record> r)
 			ofile << "\n";
 
 			//  screen writes 
-			//std::cout << "Argtype is " << r[0].getArgType();
-			std::cout << r[0].getLabel();
+			/*std::cout << r[0].getLabel();
 			std::cout << r[0].getEmulation();
 			std::cout << r[0].getArgumentL();
 			std::cout << r[0].getArgumentR();
 			std::cout << r[0].getUnknown();
 			std::cout << r[0].getComment();
-			std::cout << "\n";
+			std::cout << "\n";*/
 
 			r.erase(r.begin());
 		}
@@ -82,7 +82,7 @@ void error(std::string s)
 	*/
 
 	if (s == "write") std::cout << "\nError writing output to file.";
-	if (s == "excess") std::cout << "\nExcess tokens detected. A comment might not have been fully deleted.";
+	if (s == "excess") std::cout << "\nExcess tokens detected.";
 	else std::cout << "\nError encountered trying to convert instruction " << s;
 	return;
 }

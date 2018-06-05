@@ -17,7 +17,7 @@
 #include <sstream>
 #include <vector>
 
-std::vector<std::string> get_input(std::string);
+std::vector<std::string> get_input(char*);
 void error(std::string);
 bool write_output(std::string, std::vector<record>);
 
