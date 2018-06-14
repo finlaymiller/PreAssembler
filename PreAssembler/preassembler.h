@@ -3,7 +3,7 @@
 	- ECED3403 Assignment 1
 	- Headerfile for the pre-assembler mainline
 	- Finlay Miller B00675696
-	- 03 June 2018
+	- 05 June 2018
 */
 
 #ifndef PREASSEMBLER_H
@@ -25,10 +25,11 @@
 #include "record.h"
 #include "conversion.h"
 #include "formatting.h"
+#include "binary_search.h"
+#include "convert.h"
+#include "io.h"
 
 /* global definitions */
-#define IFILE_PATH "A:/Documents/GitHub/PreAssembler/input.txt"
-#define OFILE_PATH "A:/Documents/GitHub/PreAssembler/output.txt"
 #define TABLE_SIZE 56
 
 #endif // !PREASSEMBLER_H

@@ -19,25 +19,30 @@ private:
 	std::string label;
 	std::string instruction;
 	std::string emulation;
+	unsigned int argType;
 	std::string argumentL;
 	std::string argumentR;
 	std::string comment;
-	bool justcomment;
+	std::string unknown;
 public:
+	record() { }
+	record(std::string b, std::string i, std::string e, unsigned int a, std::string l, std::string r, std::string c, std::string u);
 	std::string getLabel() { return label; }
 	std::string getInstruction() { return instruction; }
 	std::string getEmulation() { return emulation; }
+	unsigned int getArgType() { return argType; }
 	std::string getArgumentL() { return argumentL; }
 	std::string getArgumentR() { return argumentR; }
 	std::string getComment() { return comment; }
-	bool isJustComment() { return justcomment; }
+	std::string getUnknown() { return unknown; }
 	void setLabel(std::string l) { this->label = l; }
 	void setInstruction(std::string i) { this->instruction = i; }
 	void setEmulation(std::string e) { this->emulation = e; }
+	void setArgType(unsigned int a) { this->argType = a; }
 	void setArgumentL(std::string l) { this->argumentL = l; }
 	void setArgumentR(std::string r) { this->argumentR = r; }
 	void setComment(std::string c) { this->comment = c; }
-	void setJustComment(bool b) { this->justcomment = b; }
+	void setUnknown(std::string u) { this->unknown = u; }
 	void write(std::ostream& out) const;
 };
 
